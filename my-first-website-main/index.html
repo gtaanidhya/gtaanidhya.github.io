@@ -9,35 +9,49 @@
 </head>
 <body>
 	<div id="menubar">
+		<div class="menu-heads">
+			<h2>HTML</h2>
+			<div class="closeBtn" onclick="closeBtn()">×</div>
+		</div>
+		
 		<div id="html">
-			<a class="menu-heads" href="index.html">HTML </a>
-			<a id="closeBtn" onclick="closeBtn()">×</a>
-				<a href="#introduction">Introduction to html</a>
-				<a id="hidden" href="#html-terms">Common HTML terms</a>
-				<div id="under-menu-hidden">
-						<a href="#elements">Elements</a>
-						<a href="#tags">Tags</a>
-						<a href="#attributes">Attributes</a>
-				</div>
-				<a href="#validator">Code validators</a>
-				<a href="#semantics">Semantics</a>
-				<a href="#block-inline">Block and Inline elements</a>
-				<a class="expandOnClick" href="#text-based">Text-based elements</a>
-				<div class="under-menu-hidden">
-					<a href="#headings">Headings</a>
-					<a href="#paragraphs">Paragraphs</a>
-					<a href="#bold-text">Bold Text with Strong</a>
-					<a href="#italicize-text">Italicize Text with Emphasis</a>
-				</div>
-				<a class="expandOnClick" href="#building-structure">Building structure</a>
-				<div class="under-menu-hidden">
-					<a href="#header">Header</a>
-					<a href="#navigation">Navigation</a>
-					<a href="#article">Article</a>
-					<a href="#section">Section</a>
-					<a href="#aside">Aside</a>
-					<a href="#footer">Footer</a>
-				</div>
+			<ul>
+				<li><a href="#introduction">Introduction to html</a></li>
+				<li onclick="dropdown1()" class="dropdown-menu"> Common HTML terms <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul id="dropdown1" class="dropdown">
+						<li><a href="#elements">Elements</a></li>
+						<li><a href="#tags">Tags</a></li>
+						<li><a href="#attributes">Attributes</a></li>
+					</ul>
+				</li>
+				<li><a href="#validator">Code validators</a></li>
+				<li><a href="#semantics">Semantics</a></li>
+				<li><a href="#block-inline">Block and Inline elements</a></li>
+				<li onclick="dropdown()" class="dropdown-menu">Text-based elements <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul class="dropdown">
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#paragraphs">Paragraphs</a></li>
+						<li><a href="#bold-text">Bold Text with Strong</a></li>
+						<li><a href="#italicize-text">Italicize Text with Emphasis</a></li>
+					</ul>
+
+				</li>
+				<li onclick="dropdown()" class="dropdown-menu">Building structure <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul class="dropdown">
+						<li><a href="#header">Header</a></li>
+						<li><a href="#navigation">Navigation</a></li>
+						<li><a href="#article">Article</a></li>
+						<li><a href="#section">Section</a></li>
+						<li><a href="#aside">Aside</a></li>
+						<li><a href="#footer">Footer</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+				
 		</div>
 	</div>
 
@@ -196,5 +210,6 @@
 	</div>
 
 	<script src="js/script.js"></script>
+	<script src="../font-awsome.js"></script>
 </body>
 </html>

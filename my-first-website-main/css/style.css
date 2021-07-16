@@ -1,6 +1,7 @@
-body{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,80 +13,83 @@ li{
     list-style: none;
 }
 
-#navbar{
-    height: 70px;
-    background: #cee6cd;
-    transition: margin-left 1s;
-}
+/* side menu */
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
 #menubar{
+    overflow-y: scroll;
     width: 0px;
     height: 100%;
-    overflow-y: scroll;
     position: fixed;
-    float: left;
+    left: 0;
+    top: 0;
     background:#3d3d3d;
-    box-sizing: border-box;
-    overflow-x: hidden;
     z-index: 1;
     transition: 0.5s;
 }
 
-.menu-heads{
-    width: 80% !important;
-    float: left;
-    display: inline !important;
-    font-weight: 700;
-    font-size: 2rem;
-    text-align: center;
-    padding-left: 0 !important;
-    padding-top: 12.5px !important;
+.menu-heads {
+    color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 70px;
+    font-size: 1.3em;
 }
 
-#closeBtn{
-    display: inline !important;
-    width: 18% !important;
-    font-weight: lighter;
-    font-size: 2rem;
-    padding: 0 !important;
-    padding: 10px 0 0 0;
-    height: 30px !important;
-    position: absolute;
-    top: 10px;
-}
-
-#menubar a{
-    clear: both;
-    display: block;
-    width: 100%;
-    color: gray;
-    height: 60px;
-    box-sizing: border-box;
-    padding-top: 20px;
-    padding-left: 20px;
-    transition: 0.3s;
-}
-
-#menubar a:hover{
+.closeBtn{
     cursor: pointer;
-    color: white;
+    font-size: 1.6em;
+    transition: all 0.4s;
 }
 
-#under-menu-hidden{
-    background: red;
-    position: absolute;
-    width: 100%;
-    display: none;
+.closeBtn:hover{
+    transform: rotate(90deg);
 }
 
-#hidden:hover #under-menu-hidden{
+#html a , .dropdown-menu{
     display: block;
+    color: #f4f4f4;
+    padding: 20px 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    padding-left: 10px;
 }
 
-
-#page-content{
-    transition: margin-left 0.5s;
+#html a:hover , .dropdown-menu:hover{
+    cursor: pointer;
+    background: #555555;
 }
+
+.dropdown{
+    padding: 20px 0;
+    background: #555;
+    z-index: 2;
+    width: 100%;
+    height: 0;
+    overflow-y: hidden;
+    padding:0;
+}
+
+.dropdown li a:hover{
+    background: #3d3d3d !important;
+}
+
+/* navbar */
 
 #menuButton{
     cursor: pointer;
@@ -96,6 +100,17 @@ li{
     margin: 10px 0 0 30px;
 }
 
-h2{
-    margin: 0px;
+#navbar{
+    height: 70px;
+    background: #cee6cd;
+    transition: margin-left 1s;
 }
+
+/* page content */
+
+#page-content{
+    transition: margin-left 0.5s;
+}
+
+
+
