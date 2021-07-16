@@ -19,7 +19,10 @@ ul{
     grid-gap: 1rem;
 }
 
-li{
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
     background: #5CDB95;
     margin-bottom: 20px;
     height: 50px;
@@ -29,19 +32,13 @@ li{
     align-items: center;
     justify-content: center;
     transition: all 0.5s;
+
 }
 
-li:hover{
+li a:hover{
     cursor: pointer;
     transform: translate(10px,-10px);
     box-shadow: -8px 8px #05386B;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3em;
-
 }
 
 @media(max-width:768px){
