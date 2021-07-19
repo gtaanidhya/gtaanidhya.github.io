@@ -13,6 +13,19 @@
     background: #8f6a30; }
   to {
     width: 0%; } }
+@media (max-width: 768px) {
+  @keyframes horizontal-hover-in {
+    from {
+      width: 0%; }
+    to {
+      width: 100%;
+      background: #061e2b; } }
+  @keyframes horizontal-hover-out {
+    from {
+      width: 100%;
+      background: #061e2b; }
+    to {
+      width: 0%; } } }
 * {
   margin: 0;
   padding: 0;
@@ -66,20 +79,46 @@ body {
     object-fit: cover; }
 
 nav {
+  background: #0a3044;
   height: 70px;
   width: 100%;
   position: fixed;
   z-index: 1; }
   nav .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     padding: 0 1rem;
     position: relative; }
     nav .container img {
-      height: 70px;
-      grid-column: 1/span 1; }
+      height: 70px; }
+    nav .container .hamburger {
+      width: 40px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      position: relative;
+      cursor: pointer; }
+      nav .container .hamburger .bar {
+        width: 100%;
+        height: 3px;
+        background: #ffbe56;
+        border-radius: 5px;
+        position: absolute;
+        transition: all 0.4s; }
+      nav .container .hamburger .bar::before, nav .container .hamburger .bar::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #ffbe56;
+        position: absolute;
+        transition: all 0.4s; }
+      nav .container .hamburger .bar::before {
+        top: -10px; }
+      nav .container .hamburger .bar::after {
+        top: 10px; }
     nav .container ul {
-      grid-column: 2/span 2;
       font-family: "Encode Sans SC", sans-serif;
       width: 300px;
       display: flex;
@@ -87,7 +126,7 @@ nav {
       padding: 1rem 0;
       position: absolute;
       right: 0; }
-      nav .container ul li {
+      nav .container ul li a {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -95,14 +134,13 @@ nav {
         text-align: center;
         position: relative;
         background: #ffbe56;
-        border-radius: 5px; }
-        nav .container ul li a {
-          font-size: 0.8rem;
-          width: auto;
-          padding: 0.7rem 0.8rem;
-          color: white;
-          z-index: 1; }
-      nav .container ul li::before {
+        border-radius: 5px;
+        font-size: 0.8rem;
+        width: auto;
+        padding: 0.7rem 0.8rem;
+        color: white;
+        z-index: 1; }
+      nav .container ul li a::before {
         content: '';
         height: 100%;
         position: absolute;
@@ -110,13 +148,20 @@ nav {
         left: 0;
         opacity: 0.3;
         animation: horizontal-hover-out 0.4s ease-in-out; }
-      nav .container ul li:hover::before {
+      nav .container ul li a:hover::before {
         animation: horizontal-hover-in 0.4s ease-in-out;
         animation-iteration-count: 1;
         animation-fill-mode: forwards; }
 
+.menu-animation .bar {
+  background: transparent !important; }
+.menu-animation .bar::before {
+  transform: translateY(10px) rotate(45deg); }
+.menu-animation .bar::after {
+  transform: translateY(-10px) rotate(-45deg); }
+
 header {
-  width: 100%; }
+  width: 100vw; }
   header .showcase {
     min-height: 100vh; }
     header .showcase .transparent {
@@ -321,9 +366,36 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr); }
 
+  .showmenu {
+    height: 150px !important;
+    padding: 1rem 0 !important; }
+
+  nav .container ul {
+    height: 0;
+    overflow: hidden;
+    background: #0a3044;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 70px;
+    padding: 0;
+    transition: all 0.5s; }
+
+  nav .container ul li a {
+    background: #0a3044;
+    border-radius: 0; }
+
+  nav .container .hamburger {
+    display: flex; }
+
   .contact-main {
     flex-direction: column; }
+    .contact-main .contact1 {
+      border-radius: 15px; }
     .contact-main .contact1, .contact-main .contact2 {
-      width: 100%; } }
+      width: 100%; }
+
+  .projects ul {
+    grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=main.css.map */
