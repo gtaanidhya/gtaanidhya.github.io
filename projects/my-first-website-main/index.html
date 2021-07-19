@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web D notes</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="menubar">
+		<div class="menu-heads">
+			<h2>HTML</h2>
+			<div class="closeBtn" onclick="closeBtn()">×</div>
+		</div>
+		
+		<div id="html">
+			<ul>
+				<li><a href="#introduction">Introduction to html</a></li>
+				<li onclick="dropdown1()" class="dropdown-menu"> Common HTML terms <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul id="dropdown1" class="dropdown">
+						<li><a href="#elements">Elements</a></li>
+						<li><a href="#tags">Tags</a></li>
+						<li><a href="#attributes">Attributes</a></li>
+					</ul>
+				</li>
+				<li><a href="#validator">Code validators</a></li>
+				<li><a href="#semantics">Semantics</a></li>
+				<li><a href="#block-inline">Block and Inline elements</a></li>
+				<li onclick="dropdown()" class="dropdown-menu">Text-based elements <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul class="dropdown">
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#paragraphs">Paragraphs</a></li>
+						<li><a href="#bold-text">Bold Text with Strong</a></li>
+						<li><a href="#italicize-text">Italicize Text with Emphasis</a></li>
+					</ul>
+
+				</li>
+				<li onclick="dropdown()" class="dropdown-menu">Building structure <i class="fas fa-chevron-down"></i></li>
+				<li>
+					<ul class="dropdown">
+						<li><a href="#header">Header</a></li>
+						<li><a href="#navigation">Navigation</a></li>
+						<li><a href="#article">Article</a></li>
+						<li><a href="#section">Section</a></li>
+						<li><a href="#aside">Aside</a></li>
+						<li><a href="#footer">Footer</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+				
+		</div>
+	</div>
+
+	<div id="page-content">
+		<div id="navbar">
+			<button onclick="openMenu()" id="menuButton">☰</button>
+		</div>
+		<div id="introduction">
+			<section>
+				<h2>Introduction to html</h2>
+				<p>HTML, HyperText Markup Language, gives content structure and meaning by defining that content as, for example, headings, paragraphs, or image. We are going to study HTML5. All the updates in HTML5 are managed by a coperation between <a href="https://www.w3.org/" target="_blank">W3C(World Wide Web consortium)</a> and <a href="https://whatwg.org/" target="_blank"> WHATWG(Web application technology working group)</a>.</p>
+			</section>
+		</div>
+		
+		<div id="html-terms">
+			<section>
+				<h2>Common HTML terms</h2>
+				<div id="elements">
+					<article>
+					<h3>Elements</h3>
+						<p>Elements are designators that define the structure and content of objects within a page. Some of the more frequently used elements include multiple levels of headings (identified as &lt;h1&gt; through &lt;h6&gt; elements) and paragraphs (identified as the &lt;p&gt;element); the list goes on to include the &lt;a&gt;, &lt;div&gt;, &lt;span&gt;, &lt;dtrong&gt;, and &lt;em&gt; elements, and many more.<p>
+						<div><h4>Self closing elements</h4>
+							<p>Not all elements consist of opening and closing tags. Some elements simply receive their content or behavior from attribute
+								s within a single tag.</p>
+							<figure>
+								<img src="images/Screenshot_(75).png" alt="examples">
+								<figcaption>Some self closing tags</figcaption>
+							</figure>
+						</div>
+				</article>
+				</div>
+				<div id="tags">
+					<article>
+					<h3>Tags</h3>
+					<p>The use of less-than and greater-than angle brackets surrounding an element creates what is known as a tag. Tags most commonly occur in pairs of opening and closing tags.The content that falls between the opening and closing tags is the content of that element</p>
+				</article>
+				</div>
+				<div id="attributes">
+					<article>
+					<h3>Attributes</h3>
+					<div>Attributes are properties used to provide additional information about an element. The most common attributes include the id attribute, which identifies an element; the class attribute, which classifies an element; the src attribute, which specifies a source for embeddable content; and the href attribute, which provides a hyperlink reference to a linked resource</div>
+					<div>Attributes are defined within the opening tag, after an element’s name. Generally attributes include a name and a value. The format for these attributes consists of the attribute name followed by an equals sign and then a quoted attribute value.</div>
+				</article>
+				<img src="images/html-syntax-outline.png" alt="Example of attribute">
+				</div>
+			</section>
+		</div>
+		<div id="validator">
+			<section>
+				<h2>Code Validators</h2>
+				<p>No matter how careful we are when writing our code, we will inevitably make mistakes. Thankfully, when writing <a href="https://validator.w3.org/" target="_blank">HTML</a> and <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS</a> we have validators to check our work. The W3C has built both HTML and CSS validators that will scan code for mistakes. Validating our code not only helps it render properly across all browsers, but also helps teach us the best practices for writing code.</p>
+			</section>
+		</div>
+		<div id="semantics">
+			<section>
+				<h2>Semantics</h2>
+				<p> Semantics within HTML is the practice of giving content on the page meaning and structure by using the proper element. Semantic code describes the value of content on a page, regardless of the style or appearance of that content. There are several benefits to using semantic elements, including enabling computers, screen readers, search engines, and other devices to adequately read and understand the content on a web page. &lt;div&gt; and &lt;span&gt; doesnot hold any sementic value.</p>
+			</section>
+		</div>
+		<div id="block-inline">
+			<h2>Block and Inline elements</h2>
+			<table>
+				<caption>Difference between Block and Inline elements</caption>
+				<tr><th>S.no</th><th>Block elements</th><th>Inline elements</th></tr>
+					<tr><td>1.</td><td>Block-level elements begin on a new line, stacking one on top of the other, and occupy any available width.</td><td>Inline-level elements do not begin on a new line. They fall into the normal flow of a document, lining up one after the other, and only maintain the width of their content.</td></tr>
+					<tr><td >2.</td><td > Block-level elements may be nested inside one another and may wrap inline-level elements.</td><td >Inline-level elements may be nested inside one another; however, they cannot wrap block-level elements.</td></tr>
+					<tr><td >3.</td><td >We’ll most commonly see block-level elements used for larger pieces of content, such as paragraphs.</td><td > We’ll usually see inline-level elements with smaller pieces of content, such as a few words.</td></tr>
+			</table>
+			<ul>
+				<li> &lt;div&gt; is an block element while  &lt;span&gt; is an inline element.</li>
+				<li>Both &lt;div&gt; and  &lt;span&gt; are used to build web-design layout and design.</li>
+			</ul>
+		</div>
+		<div id="text-based">
+			<h2>Text-based elements</h2>
+			<div id="headings">
+				<section>
+					<h3>Headings</h3>
+					<p>Headings are block-level elements, and they come in six different rankings, &lt;h1&gt; through &lt;h6&gt;. Headings help to quickly break up content and establish hierarchy, and they are key identifiers for users reading a page. They also help search engines to index and determine the content on a page.</p>
+					<p>Headings should be used in an order that is relevant to the content of a page. The primary heading of a page or section should be marked up with an &lt;h1&gt; element, and subsequent headings should use &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt; elements as necessary.</p>
+					<p>Each heading level should be used where it is semantically valued, and should not be used to make text bold or big—there are other, better ways to do that.</p>
+				</section>
+			</div>
+			<div id="paragraphs">
+				<section>
+					<h3>Paragraphs</h3>
+					<p>Headings are often followed by supporting paragraphs. Paragraphs are defined using the &lt;p&gt; block-level element. Paragraphs can appear one after the other, adding information to a page as desired. Here is an example of how to set up paragraphs.</p>
+				</section>
+			</div>
+			<div id="bold-text">
+				<section>
+					<h3>Bold Text with Strong</h3>
+					<p>To make text bold and place a strong importance on it, we’ll use the &lt;strong&gt; inline-level element. There are two elements that will bold text for us: the &lt;strong&gt; and &lt;b&gt; elements. It is important to understand the semantic difference between the two.</p>
+					<p>The &lt;strong&gt; element is semantically used to give strong importance to text, and is thus the most popular option for bolding text. The &lt;b&gt; element, on the other hand, semantically means to stylistically offset text</p>
+				</section>
+			</div>
+			<div id="italicize-text">
+				<section>
+					<h3>Italicize Text with Emphasis</h3>
+					<p>To italicize text, thereby placing emphasis on it, we’ll use the &lt;em&gt; inline-level element. As with the elements for bold text, there are two different elements that will italicize text, each with a slightly different semantic meaning.</p>
+					<p>The &lt;em&gt; element is used semantically to place a stressed emphasis on text; it is thus the most popular option for italicizing text. The other option, the &lt;i&gt; element, is used semantically to convey text in an alternative voice or tone</p>
+				</section>
+			</div>
+		</div>
+		<div id="building-structure">
+				<h2>Building structure</h2>
+				<p>For the longest time the structure of a web page was built using divisions. The problem was that divisions provide no semantic value, and it was fairly difficult to determine the intention of these divisions. Fortunately HTML5 introduced new structurally based elements, including the &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, and &lt;footer&gt; elements.</p>
+				<figure>
+					<img src="images/building-structure.png" width="500" alt="Building structure">
+					<figcaption>Structure of a HTML page</figcaption>
+				</figure>
+				<section id="header">
+					<h3>Header</h3>
+					<p>The &lt;header&gt; element, like it sounds, is used to identify the top of a page, article, section, or other segment of a page. In general, the &lt;header&gt; element may include a heading, introductory text, and even navigation.</p>
+				</section>
+
+				<section>
+					<h3>&lt;header&gt; vs. &lt;head&gt; vs. &lt;h1&gt; through &lt;h6&gt; Elements</h3>
+					<p>It is easy to confuse the &lt;header&gt; element with the &lt;head&gt; element or the heading elements, &lt;h1&gt; through &lt;h6&gt;. They all have different semantic meanings and should be used according to their meanings. For reference…</p>
+					<ul>
+						<li>The &lt;header&gt; element is a structural element that outlines the heading of a segment of a page. It falls within the &lt;body&gt; element.</li>
+						<li>The &lt;head&gt; element is not displayed on a page and is used to outline metadata, including the document title, and links to external files. It falls directly within the &lt;html&gt; element.</li>
+						<li>Heading elements, &lt;h1&gt; through &lt;h6&gt;, are used to designate multiple levels of text headings throughout a page.</li>
+					</ul>
+				</section>
+
+				<section id="navigation">
+					<h3>Navigation</h3>
+					<p>The &lt;nav&gt; element identifies a section of major navigational links on a page. The &lt;nav&gt; element should be reserved for primary navigation sections only, such as global navigation, a table of contents, previous/next links, or other noteworthy groups of navigational links.</p>
+					<p>Most commonly, links included within the &lt;nav&gt; element will link to other pages within the same website or to parts of the same web page. Miscellaneous one-off links should not be wrapped within the &lt;nav&gt; element; they should use the anchor element, &lt;a&gt;, and the anchor element alone.</p>
+				</section>
+
+				<section id="article">
+					<h3>Article</h3>
+					<p>The &lt;article&gt; element is used to identify a section of independent, self-contained content that may be independently distributed or reused. We’ll often use the &lt;article&gt; element to mark up blog posts, newspaper articles, user-submitted content, and the like.</p><p>When deciding whether to use the &lt;article&gt; element, we must determine if the content within the element could be replicated elsewhere without any confusion. If the content within the &lt;article&gt; element were removed from the context of the page and placed, for example, within an email or printed work, that content should still make sense.</p>
+				</section>
+
+				<section id="section">
+						<h3>Section</h3>
+					<p>The &lt;section&gt; element is used to identify a thematic grouping of content, which generally, but not always, includes a heading. The grouping of content within the &lt;section&gt; element may be generic in nature, but it’s useful to identify all of the content as related.</p><p>The &lt;section&gt; element is commonly used to break up and provide hierarchy to a page.</p>
+				</section>
+
+				<article>
+					<h3>Deciding Between &lt;article&gt;, &lt;section&gt;, or &lt;div&gt; Elements</h3>
+					<p>At times it becomes fairly difficult to decide which element— &lt;article&gt;, &lt;section&gt;, or &lt;div&gt;—is the best element for the job based on its semantic meaning. The trick here, as with every semantic decision, is to look at the content.<br/>Both the &lt;article&gt; and &lt;section&gt; elements contribute to a document’s structure and help to outline a document. If the content is being grouped solely for styling purposes and doesn’t provide value to the outline of a document, use the &lt;div&gt; element.<br/>If the content adds to the document outline and it can be independently redistributed or syndicated, use the &lt;article&gt; element.<br/>If the content adds to the document outline and represents a thematic group of content, use the &lt;section&gt; element.</p>
+				</article>
+				<section id="aside">
+					<h3>Aside</h3>
+					<p>The &lt;aside&gt; element holds content, such as sidebars, inserts, or brief explanations, that is tangentially related to the content surrounding it. When used within an &lt;article&gt; element, for example, the &lt;aside&gt; element may identify content related to the author of the article.</p><p>We may instinctively think of an &lt;aside&gt; element as an element that appears off to the left or right side of a page. We have to remember, though, that all of the structural elements, including the &lt;aside&gt; element, are block-level elements and as such will appear on a new line, occupying the full available width of the page or of the element they are nested within, also known as their parent element.</p>
+				</section>
+				<section id="footer">
+					<h3>Footer</h3>
+					<p>The &lt;footer&gt; element identifies the closing or end of a page, article, section, or other segment of a page. Generally the &lt;footer&gt; element is found at the bottom of its parent. Content within the &lt;footer&gt; element should be relative information and should not diverge from the document or section it is included within.</p>
+				</section>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+	<script src="../font-awsome.js"></script>
+</body>
+</html>
