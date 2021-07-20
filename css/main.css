@@ -120,7 +120,7 @@ nav {
         top: 10px; }
     nav .container ul {
       font-family: "Encode Sans SC", sans-serif;
-      width: 300px;
+      width: 400px;
       display: flex;
       justify-content: space-around;
       padding: 1rem 0;
@@ -152,6 +152,9 @@ nav {
         animation: horizontal-hover-in 0.4s ease-in-out;
         animation-iteration-count: 1;
         animation-fill-mode: forwards; }
+      nav .container ul .resume {
+        background: #fff;
+        color: #ffbe56; }
 
 .menu-animation .bar {
   background: transparent !important; }
@@ -367,7 +370,7 @@ header {
     grid-template-rows: repeat(2, 1fr); }
 
   .showmenu {
-    height: 150px !important;
+    height: 190px !important;
     padding: 1rem 0 !important; }
 
   nav .container ul {
