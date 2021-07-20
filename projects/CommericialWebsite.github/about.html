@@ -7,21 +7,23 @@
     <meta name="keywords" content="hotel,jammu">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width:600px)" href="css/mobile.css">
-    <title>Hotel BT | About</title>
+    <script src="https://kit.fontawesome.com/b9327e5f49.js" crossorigin="anonymous"></script>
+    <title>Hotel Website</title>
 </head>
 <body>
-    <header>
-       <nav id="navbar" >
-           <div class="container">
-               <h1 class="logo"><a href="index.html">HBT</a></h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="current">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-           </div>
-       </nav>
-    </header>
+    <nav id="navbar" >
+        <div class="container">
+            <h1 class="logo"><a href="index.html">TAJ</a></h1>
+            <i onclick="openMenu()" id="hamburger" class="fa fa-bars"></i>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="current">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="fixed"></div>
 
     <section id="about-info" class="bg-light py-3">
         <div class="container">
@@ -55,5 +57,7 @@
     <footer id="main-footer">
         <p>Hotel BT &copy; 2021, All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

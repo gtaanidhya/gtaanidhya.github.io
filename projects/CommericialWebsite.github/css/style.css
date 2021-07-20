@@ -1,4 +1,12 @@
 /* Reset */
+:root{
+    --white-color: #fff;
+    --primary-color: #1cc3b2;
+    --focused-color: #169689;
+}
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -27,13 +35,11 @@ p{
 
 .container{
     margin: auto;
-    max-width: 1400px;
-    overflow: auto;
-    padding: 0 20px;
+    max-width: 1200px;
 }
 
 .text-primary{
-    color: #f7c08a;
+    color: var(--primary-color);
 }
 
 .lead{
@@ -44,35 +50,27 @@ p{
     display: inline-block;
     font-size: 18px;
     color: white;
-    background-color: #333;
+    background-color: var(--primary-color);
     padding: 13px 20px;
     border: none;
     cursor: pointer;
     transition: 0.5s;
+    border: 2px solid var(--primary-color);
 }
 
 .btn:hover{
-    background: #f7c08a;
-}
-
-.btn-light{
-    background: #f4f4f4;
-    color: #333;
+    background: var(--white-color);
+    color: var(--primary-color);
 }
 
 .bg-dark{
-    background: #333;
-    color: #fff;
+    background: var(--white-color);
 }
 
-.bg-light{
-    background: #f4f4f4;
-    color: #333;
-}
 
 .bg-primary{
-    background: #f7c08a;
-    color: #333;
+    background: var(--primary-color);
+    color: var(--white-color);
 }
 
 .clr{
@@ -95,63 +93,116 @@ p{
     padding: 30px 0;
 }
 
+.fixed{
+    height: 70px;
+    width: 100%;
+}
+
 /* navbar */
 #navbar{
-    background-color: #333;
-    color: white;
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     height: 70px;
+    z-index: 1000;
+    padding: 0 1rem;
+    
+}
+
+#navbar .container{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 #navbar a{
-    color: white;
+    color: var(--white-color);
 }
 
 #navbar h1{
+    font-size: 2.3rem;
     float: left;
     padding-top: 20px;
 }
 
 #navbar ul{
+    width: 300px;
     list-style: none;
     float: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 #navbar ul li{
+    height: 100%;
     float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #navbar ul li a{
+    width: 90px;
+    background: var(--white-color);
+    color: var(--primary-color);
     display: block;
-    padding: 20px;
+    padding: 0.6rem 1rem;
+    height: 50px;
     text-align: center;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 #navbar ul li a:hover, #navbar ul li .current{
-    background-color: #444;
-    color: #f7c08a;
+    
+    background-color: var(--focused-color);
+    color: var(--white-color);
 }
 
 /* Showcase */
-#showcase{
+
+
+.showcase{
     background: url("../img/showcase.jpg") center center/cover no-repeat;
-    min-height: 500px;
+    height: 100vh;
+    position: relative;
 }
 
-#showcase .showcase-content{
+.showcase .showcase-content{
+    height: 100%;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 170px;
+    padding: 0 1rem;
 }
 
-#showcase .showcase-content h1{
+.showcase .showcase-content h1{
     font-size: 60px;
     line-height: 1.2em;
 }
 
-#showcase .showcase-content p{
+.showcase .showcase-content p{
     padding-bottom: 20px;
     line-height: 1.7em;
+}
+
+.showcase::before{
+    content: '';
+    background: #0f3838;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.showcase * {
+    z-index: 10;
 }
 
 /* Home Info */
@@ -163,9 +214,8 @@ p{
 #home-info .info-img{
     float: left;
     width: 50%;
-    background-image: url('../img/photo-1.jpg');
-    min-height: 100%;
-    
+    background: url('../img/photo-1.jpg') center center/cover no-repeat;
+    height: 100%;
 }
 
 #home-info .info-content{
@@ -195,10 +245,17 @@ p{
 
 /* About Info */
 
+#about-info{
+    height: 350px;
+}
+
+#about-info .container{
+    height: 100%;
+}
+
 #about-info .info-right{
     float: right;
     width: 50%;
-    min-height: 100%;
 }
 
 #about-info .info-right img{
@@ -206,12 +263,13 @@ p{
      margin: auto;
      width: 70%;
      border-radius: 50%;
+     height: 100%;
 }
 
 #about-info .info-left{
     float: left;
     width: 50%;
-    min-height: 100%;
+    height: 100%;
 }
 
 /* Testimonials */
@@ -250,6 +308,12 @@ p{
 
 /* Contact form */
 
+#contact-info{
+    width: 100%;
+    height: 250px;
+    background: #fff;
+}
+
 #contact-form .form-group{
     margin-bottom: 20px;
 }
@@ -279,7 +343,7 @@ p{
 /* Footer */
 #main-footer{
     text-align: center;
-    background: #444;
+    background: var(--focused-color);
     color: #fff;
     padding: 20px;
 }

@@ -2,11 +2,11 @@ let opened=false;
 function openMenu() {
 
     if(opened==false){
-        document.getElementById('menu').style.width="40%";
+        document.getElementById('menu').classList.add("menu");
         opened=true;
     }
     else{
-        document.getElementById('menu').style.width="0";
+        document.getElementById('menu').classList.remove("menu");
         opened=false;
     }
     

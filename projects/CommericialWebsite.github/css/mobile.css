@@ -7,22 +7,26 @@
     transition: all 0.3s ease;
 }
 
-#hamburger:hover{
-    color: #f7c08a;
-}
 
-#menu{
+#navbar ul{
     width: 0;
-    clear: both;
-    background-color: #333;
+    overflow: hidden;
     position: fixed;
     top: 70px;
     right: 0px;
+    flex-direction: column;
     transition: width 0.5s ease-in-out;
 }
 
-#navbar ul li{
-    float: none;
+#navbar ul li a{
+    width: 100%;
+    border-radius: 0;
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.menu{
+    width:150px !important;
 }
 
 
@@ -58,4 +62,12 @@
 
 .contact-box{
     border-bottom: 1px solid rgb(66, 66, 66);
+}
+
+#contact-info{
+    height: auto;
+}
+
+#contact-form{
+    padding: 30px 1rem;
 }
