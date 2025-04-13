@@ -42,7 +42,9 @@ li {
   margin: auto; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden; 
+  min-height: 100vh;
+}
 
 .fixed {
   height: 70px;
@@ -350,8 +352,8 @@ header {
     box-shadow: -8px 8px #0a3044; }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  /* position: relative;
+  bottom: 0; */
   width: 100%;
   min-height: 100px;
   height: auto;
@@ -401,6 +403,7 @@ header {
       width: 100%; }
 
   .projects ul {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; } 
+  .foo}
 
 /*# sourceMappingURL=main.css.map */
