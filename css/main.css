@@ -371,7 +371,7 @@ header {
   header .showcase div:nth-child(3) {
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr); }
+    grid-template-rows: 1fr 2fr; }
 
   .showmenu {
     height: 190px !important;
@@ -403,7 +403,6 @@ header {
       width: 100%; }
 
   .projects ul {
-    grid-template-columns: 1fr; } 
-  .foo}
+    grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=main.css.map */
